@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="home-bg">
+    <div class="main-container predictor-container">
+        <div class="header-row">
+            <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
+            <span class="page-title">Symptom Checker</span>
+        </div>
+        <form id="symptom-form" class="symptom-form">
+            <div class="symptom-section">
+                <div class="symptom-title-row">
+                    <i class="fas fa-search"></i>
+                    <span class="symptom-title">Select Your Symptoms</span>
+                </div>
+                <div class="symptom-subtitle">
+                    Choose all symptoms you are currently experiencing. The more accurate your selection, the better our prediction will be.
+                </div>
+                <div id="custom-symptom-row" style="margin-bottom:16px;display:flex;gap:8px;align-items:center;">
+                    <input type="text" id="custom-symptom-input" placeholder="Type a symptom and press Add" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ccc;">
+                    <button type="button" id="add-custom-symptom" class="main-btn" style="width:auto;padding:8px 18px;font-size:1rem;">Add</button>
+                </div>
+                <div class="symptom-grid" id="symptom-grid">
+                    <!-- Checkboxes will be injected by JS -->
+                </div>
+            </div>
+            <button type="submit" class="main-btn big-btn" id="analyze-btn">Analyze Symptoms</button>
+        </form>
+        <div id="reported-symptoms" class="reported-symptoms" style="display:none;"></div>
+        <div id="result"></div>
+        <div class="disclaimer-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <b>Important Disclaimer</b>
+            <div>
+                This prediction is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+            </div>
+        </div>
+    </div>
+    <script src="/static/predictor.js"></script>
+</body>
+</html>
